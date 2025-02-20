@@ -11,6 +11,7 @@
             <headerTitle
                 slug="Категории"
                 status="Посмотреть"
+                link="/category"
             />
             <div class="menu-scroll">
                 <HeaderPaging
@@ -23,6 +24,7 @@
         <headerTitle   
                    slug="Категории"
                    status="Посмотреть"
+                   link="/popular"
         />
         <div class="card-main">
             <div class="card-section">

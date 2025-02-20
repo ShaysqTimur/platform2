@@ -1,8 +1,8 @@
 <script setup>
 defineProps({
-    status:String,
+    status:String ,
     slug:String,
-
+    link:String
 });
 </script>
 
@@ -12,9 +12,9 @@ defineProps({
       <p class="header-text">{{slug}}</p>
     </div>
     <div class="header-titles">
-      <button class="but-title">
+      <NuxtLink  :to ="link" class="but-title">
         {{ status }}
-      </button>
+      </NuxtLink>
     </div>
   </div>
 </template>
