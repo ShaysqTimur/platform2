@@ -8,16 +8,15 @@ const props = defineProps({
 <template>
     <div class="cardss">
         <div class="cards-image">
-            <img :src="image" alt="Image" class="cards-img" width="97px" height="97px"/>
+            <img :src="image" alt="Image" class="cards-img" width="109px" height="85px"/>
             <div class="card-d-icons heart-icons">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cards-icons">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                 </svg>
             </div>
-            
         </div>
        <div class="cards-text">
-            <h1 class="name-card">{{ itemData?.slug}}</h1>
+            <NuxtLink :to="{name:'items-id', params:{id:itemData?.id}}"><h1 class="name-card">{{ itemData?.slug}}</h1></NuxtLink>
             <div class="card-title">
                 <h1 class="card-description">{{itemData?.status}} 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="cards-icons star-icons">
@@ -66,7 +65,6 @@ const props = defineProps({
         display:flex;
         flex-direction: column;
         width: 180px;
-        height: 175px;
         gap: 10PX;
         background-color: white;
         padding: 10px;
@@ -89,10 +87,10 @@ const props = defineProps({
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 90;
+        height: 90px;
         position: relative;
         object-fit: contain;
-        overflow: hidden;
+ 
     }
    
     .card-description{
